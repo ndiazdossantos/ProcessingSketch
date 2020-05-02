@@ -81,6 +81,17 @@ public class Formas extends PApplet {
         fill(255, 255, 255);
         rect(mouseX+24,mouseY+21,6,8);
 
+
+        //objeto pistola cañon
+        stroke(126, 128, 126);
+        fill(126, 128, 126);
+        rect(mouseX+82,mouseY+36,38,10);
+
+        //objeto pistola empuñadura
+        stroke(126, 128, 126);
+        fill(126, 128, 126);
+        rect(mouseX+82,mouseY+36,14,39);
+
         //persona mano interior
         stroke(0);
         fill(249, 229, 247);
