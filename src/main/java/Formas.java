@@ -81,6 +81,33 @@ public class Formas extends PApplet {
         fill(255, 255, 255);
         rect(mouseX+24,mouseY+21,6,8);
 
+        //persona mano interior
+        stroke(0);
+        fill(249, 229, 247);
+        rect(mouseX+15,mouseY+46,80,25);
+
+        //persona brazo interior
+        stroke(0);
+        fill(20, 94, 6);
+        rect(mouseX-5,mouseY+46,80,25);
+
+
+        //persona cuerpo
+        stroke(0);
+        fill(20, 94, 6);
+        rect(mouseX-29,mouseY+45,60,120);
+
+        //persona mano exterior
+        stroke(0);
+        fill(249, 229, 247);
+        rect(mouseX-21,mouseY+52,30,80);
+
+        //persona brazo exterior
+        stroke(0);
+        fill(20, 94, 6);
+        rect(mouseX-21,mouseY+45,30,70);
+
+
 
 
 
