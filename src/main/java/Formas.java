@@ -11,8 +11,8 @@ public class Formas extends PApplet {
     // definimos atributos para todoa la clase
     // es la ventana de salida de la aplicacion
     // en Processing las aplicaciones se llaman sketchs
-    int viewport_w = 640; // ancho en pixels
-    int viewport_h = 360; // alto en pixels
+    int viewport_w = 1140; // ancho en pixels
+    int viewport_h = 860; // alto en pixels
 
     // truco para poder ejecutar nuestro código
     // en el entorno gráfico ya creado
@@ -118,7 +118,15 @@ public class Formas extends PApplet {
         fill(20, 94, 6);
         rect(mouseX-21,mouseY+45,30,70);
 
+        //cuerpo inferior pierna izquierda
+        stroke(0);
+        fill(109, 80, 23);
+        rect(mouseX-29,mouseY+150,40,80);
 
+        //cuerpo inferior pierna derecha
+        stroke(0);
+        fill(109, 80, 23);
+        rect(mouseX+1,mouseY+150,30,80);
 
 
 
