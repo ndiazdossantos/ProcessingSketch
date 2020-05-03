@@ -128,10 +128,55 @@ public class Formas extends PApplet {
         fill(109, 80, 23);
         rect(mouseX+1,mouseY+150,30,80);
 
+        //sustento diana
+        stroke(0);
+        fill(36, 25, 2);
+        rect(960,600,30,200);
 
+        //suelo
+        stroke(0);
+        fill(0, 179, 0);
+        rect(0,700,1500,1000);
 
+        //fondo diana
+        stroke(0);
+        fill(255,255,255);
+        rect(900,450,150,150);
 
+        //diana externa1 blanca
+        stroke(0);
+        fill(255,255,255);
+        ellipse(975,525,130,130);;
 
+        //diana externa2 blanca
+        stroke(0);
+        fill(255,255,255);
+        ellipse(975,525,110,110);;
+
+        //diana externa3 azul
+        stroke(0);
+        fill(62, 190, 225);
+        ellipse(975,525,90,90);;
+
+        //diana interna1 azul
+        stroke(0);
+        fill(62, 190, 225);
+        ellipse(975,525,70,70);;
+
+        //diana interna2 rojo
+        stroke(0);
+        fill(232, 40, 21);
+        ellipse(975,525,50,50);
+
+        //diana interna3 rojo
+        stroke(0);
+        fill(232, 40, 21);
+        ellipse(975,525,30,30);
+
+        //diana interna4 amarillo
+        stroke(0);
+        fill(246, 237, 45);
+        ellipse(975,525,10,10);
 
 
 
