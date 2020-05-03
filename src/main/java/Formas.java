@@ -178,6 +178,21 @@ public class Formas extends PApplet {
         fill(246, 237, 45);
         ellipse(975,525,10,10);
 
+        // condicional ratón presionado
+
+        if(mousePressed){
+
+            //objetivo vertical
+            stroke(0);
+            fill(100, 249, 52);
+            rect(972,513,5,20);
+
+            //objetivo horizontal
+            stroke(0);
+            fill(100, 249, 52);
+            rect(965,520,20,5);
+
+        }
 
 
     }
