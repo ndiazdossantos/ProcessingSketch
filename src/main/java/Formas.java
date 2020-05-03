@@ -46,6 +46,36 @@ public class Formas extends PApplet {
         //fondo
         background(29, 155, 227);
 
+        // nube1-1
+        stroke(255,255,255);
+        fill(255, 255, 255);
+        ellipse(150,95,85,75);
+
+        // nube1-2
+        stroke(255,255,255);
+        fill(255, 255, 255);
+        ellipse(195,95,85,75);
+
+        // nube1-3
+        stroke(255,255,255);
+        fill(255, 255, 255);
+        ellipse(240,95,85,75);
+
+        // nube2-1
+        stroke(255,255,255);
+        fill(255, 255, 255);
+        ellipse(500,95,85,75);
+
+        // nube2-2
+        stroke(255,255,255);
+        fill(255, 255, 255);
+        ellipse(545,95,85,75);
+
+        // nube2-3
+        stroke(255,255,255);
+        fill(255, 255, 255);
+        ellipse(590,95,85,75);
+
         //persona orejas
         stroke(0);
         fill(249, 229, 247);
@@ -193,6 +223,8 @@ public class Formas extends PApplet {
             rect(965,520,20,5);
 
         }
+
+        
 
 
     }
