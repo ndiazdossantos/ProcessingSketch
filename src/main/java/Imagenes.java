@@ -1,5 +1,6 @@
 // importamos la libreria proncipal
 import processing.core.PApplet;
+import processing.core.PImage;
 
 /** Hereda de PApplet, que es la clase padre que tiene todos los métodos
  * y atributos para usar Processing
@@ -12,13 +13,11 @@ public class Imagenes extends PApplet {
     // en Processing las aplicaciones se llaman sketchs
     int viewport_w = 640; // ancho en pixels
     int viewport_h = 360; // alto en pixels
-
     // truco para poder ejecutar nuestro código
     // en el entorno gráfico ya creado
     public static void main(String args[]) {
         PApplet.main("Imagenes");
     }
-
     // método que tiene las configuraciones iniciales
     @Override
     public void settings() {
@@ -26,7 +25,11 @@ public class Imagenes extends PApplet {
         smooth(8);
     }
 
+    // declaramos el objeto para poder tener acceso en toda la clase
+
+    PImage homer;
     // en este metodo tambien podemos meter configuraciones iniciales de nuestro sketch
+
     @Override
     public void setup() {
     }
@@ -37,10 +40,25 @@ public class Imagenes extends PApplet {
     // es decir, se repite el código infinitamente
     @Override
     public void draw() {
+        // ACUERDATE: esto se repite en bucle indefinidamente
         // pintamos la ventana según rgb
         // hay muchas paginas que nos dan los colores en rgb
         // esta es una de ellas https://htmlcolorcodes.com/es/
         // prueba a cambiar estos colores
+        // fondo de la ventana
         background(200,100,0);
+        // Necesitamos darle la ruta absoluta
+        // la función dataPath nos crea la ruta al directorio
+        // data en la raíz del proyecto
+        // inicializamos el objeto con la imagen del directorio 'data'
+        homer = loadImage(dataPath("homer.png"));
+
+
+        // cargamos la imagen en la ventana en cada iteración del bucle
+        // posicionamos la imagen segun el movimiento del raton
+
+        image(homer,mouseX,mouseY);
+
     }
+
 }
