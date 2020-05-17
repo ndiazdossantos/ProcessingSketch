@@ -21,38 +21,49 @@ public class Imagenes extends PApplet {
     // método que tiene las configuraciones iniciales
     @Override
     public void settings() {
-        size(viewport_w, viewport_h, P2D);
-        smooth(8);
+
+       // size(viewport_w, viewport_h, P2D);
+       // smooth(8);
+
+        //datos que trabajaremos con paisaje
+
+        size(1200,700);
+        paisaje = loadImage("paisaje.jpg");
     }
 
     // declaramos el objeto para poder tener acceso en toda la clase
 
     PImage homer;
+    PImage paisaje;
+
     // en este metodo tambien podemos meter configuraciones iniciales de nuestro sketch
 
     @Override
     public void setup() {
+        // hay que indicar los tamaños y carga de imagenes en settings o nos dará error
     }
 
-    // método principal. Aqui estará el grueso de nuestro código
-    // sería equivalente a un 'main'
-    // la DIFERENCIA principal es que se ejecuta en bucle
-    // es decir, se repite el código infinitamente
+    // ACUERDATE: esto se repite en bucle indefinidamente
     @Override
     public void draw() {
-        // ACUERDATE: esto se repite en bucle indefinidamente
-        // pintamos la ventana según rgb
-        // hay muchas paginas que nos dan los colores en rgb
-        // esta es una de ellas https://htmlcolorcodes.com/es/
-        // prueba a cambiar estos colores
-        // fondo de la ventana
-        background(200,100,0);
-        // Necesitamos darle la ruta absoluta
-        // la función dataPath nos crea la ruta al directorio
-        // data en la raíz del proyecto
-        // inicializamos el objeto con la imagen del directorio 'data'
-        homer = loadImage(dataPath("homer.png"));
 
+        // image(paisaje,0,0);  NO HACE FALTA UNA VEZ INDICADO EL paisaje.loadPixels();
+        loadPixels();
+     //aqui indicaremos que pixeles deseamos cargar
+        paisaje.loadPixels();
+        for(int x = 0; x <width; x++){
+            for(int y = 0; y<height;y++){
+               int loc = x+y*width;
+               pixels[loc] = paisaje.pixels[loc];
+           }
+        }
+        // actualizamos indicando la selección, de no hacerlo no aparecerá ninguna imagen de fondo
+
+      updatePixels();
+
+        // inicializamos el objeto con la imagen del directorio 'data'
+
+        homer = loadImage(dataPath("homer.png"));
 
         // cargamos la imagen en la ventana en cada iteración del bucle
         // posicionamos la imagen segun el movimiento del raton
