@@ -54,8 +54,22 @@ public class Imagenes extends PApplet {
         for(int x = 0; x <width; x++){
             for(int y = 0; y<height;y++){
                int loc = x+y*width;
-               pixels[loc] = paisaje.pixels[loc];
-           }
+
+               // aquí tomaremos en cuenta los colores que cargamos, para poder modificarlos en especifico posteriormente
+
+                float r = red(paisaje.pixels[loc]);
+                float g = green(paisaje.pixels[loc]);
+                float b = blue(paisaje.pixels[loc]);
+
+                float cur = dist(mouseX,mouseY,x,y);
+                float factor = map(cur,0,200,2,0);
+
+
+          //    pixels[loc] = paisaje.pixels[loc]; //aqui podemos realizar pruebas para la carga de x colores ejemplo pixels[loc]=color(g,r,b*2);
+                                                                                             // donde damos el dobble de carga de pixeles azules
+                pixels[loc] = color(r*factor,g*factor,b*factor);
+
+            }
         }
         // actualizamos indicando la selección, de no hacerlo no aparecerá ninguna imagen de fondo
 
