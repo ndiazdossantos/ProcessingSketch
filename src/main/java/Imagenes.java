@@ -29,12 +29,14 @@ public class Imagenes extends PApplet {
 
         size(1200,700);
         paisaje = loadImage("paisaje.jpg");
+
     }
 
     // declaramos el objeto para poder tener acceso en toda la clase
 
     PImage homer;
     PImage paisaje;
+    PImage homer2;
 
     // en este metodo tambien podemos meter configuraciones iniciales de nuestro sketch
 
@@ -78,11 +80,14 @@ public class Imagenes extends PApplet {
         // inicializamos el objeto con la imagen del directorio 'data'
 
         homer = loadImage(dataPath("homer.png"));
+        homer2 = loadImage(dataPath("homer2.png"));
 
         // cargamos la imagen en la ventana en cada iteración del bucle
         // posicionamos la imagen segun el movimiento del raton
 
-        image(homer,mouseX,mouseY);
+        if(mousePressed){
+            image(homer2,mouseX,mouseY);
+        }else  image(homer,mouseX,mouseY);
 
     }
 
